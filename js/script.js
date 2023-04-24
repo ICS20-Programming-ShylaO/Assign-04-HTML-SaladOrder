@@ -18,7 +18,7 @@ function orderSent() {
   //declaring size, number of drinks, and salad dressing
   let size = document.getElementById("salad-size").value;
   let nOfDrinks = parseInt(document.getElementById("drinks").value);
-  let userDressing = document.getElementById("options").value;
+  let userDressing = document.getElementById("salad-dressing").value;
   
   //determining the number of checkboxes checked for number of toppings
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
