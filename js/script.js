@@ -7,21 +7,18 @@
 "use strict"
 
 function orderSent() {
-  //setting a constants for tax and all prices except for salad dressing
+  //setting constants for tax and prices for all products (except for salad dressing)
   const HST = 0.13;
   const PRICE_SMALL = 5.99;
   const PRICE_MEDIUM = 7.99;
   const PRICE_LARGE = 10.99;
   const PRICE_TOPPINGS = 1.50;
   const PRICE_DRINKS = 2.50;
-  
-  //initializing variables sizeDrink for if else statement
-  let sizeDrink = 0;
-  
+
   //declaring size, number of drinks, and salad dressing
-  let size = document.getElementById("size").value;
+  let size = document.getElementById("salad-size").value;
   let nOfDrinks = parseInt(document.getElementById("drinks").value);
-  let userDressing = (document.getElementById("options").value);
+  let userDressing = document.getElementById("options").value;
   
   //determining the number of checkboxes checked for number of toppings
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
@@ -29,41 +26,39 @@ function orderSent() {
   
   //determining the cost of the toppings using number of toppings x price per topping
   let costToppings = nOfToppings * PRICE_TOPPINGS;
+  // initializing sizeCost as 0 and failed response for when user did not enter a size
+  let sizeCost = 0;
+  let failedResponse = "";
+  //determining the cost of size + drinks using compound if/then statements
   
-  //determining the cost of the base sandwich using compound if/then statements
-  //if the size is small and there is one drink
-  if ((size == "small") && (nOfDrinks == 1)) {
-    sizeDrinks = PRICE_SMALL + PRICE_DRINKS;
+  //if the size is small
+  if (size == "small") {
+    sizeCost = PRICE_SMALL;
   }
-  //if the meat type is beef and the size is small
-  else if ((meatType == "beef") && (sandSize == "small")) {
-    baseSandCost = 6.50;
+  //if the size is medium
+  else if (size == "medium") {
+    sizeDrinks = PRICE_MEDIUM;
   }
-  //if the meat type is chicken and the size is medium
-  else if ((meatType == "chicken") && (sandSize == "medium")) {
-    baseSandCost = 7.00;
+  //else if the size is large
+  else if (size == "large") {
+    sizeDrinks = PRICE_LARGE;
   }
-  //if the meat type is beef and the size is medium
-  else if ((meatType == "beef") && (sandSize == "medium")) {
-    baseSandCost = 7.50;
+  //otherwise, the user did not enter a size
+  else {
+    failedResponse = "Please enter a size."
   }
-  //if the meat type is chicken and the size is large
-  else if ((meatType == "chicken") && (sandSize == "large")) {
-    baseSandCost = 8.00;
-  }
-  //if the meat type is beef and the size is large
-  else if ((meatType == "beef") && (sandSize == "large")) {
-    baseSandCost = 8.50;
-  }
+  //determining cost of drinks
+  drinksCost = nOfDrinks * PRICE_DRINKS;
+  //initializing salad dressing for upcoming if statement
+  let dressingCost = 0;
   
-  //determining the cost of the sides using constants
-  const UNIT_PRICE_DRINKS = 3.00;
-  let costDrinks = numDrinks * UNIT_PRICE_DRINKS;
-  const UNIT_PRICE_POTATOES = 6.00;
-  let costPotatoes = numPotatoes * UNIT_PRICE_POTATOES;
+  //adding 0.50 to the subtotal if the user wants salad dressing
+  if (userDressing == "yes") {
+    dressingCost = 0.50
+  }
   
   //calculating the subtotal, tax and total
-  let subtotal = baseSandCost + costToppings + costDrinks + costPotatoes;
+  let subtotal = sizeCost + costToppings + drinksCost + dressingCost;
   let tax = subtotal * HST;
   let total = subtotal + tax;
 

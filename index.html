@@ -88,12 +88,12 @@
           </label>
           <br><br>
           <!-- Drop-Down Menu for Number of Drinks -->
-          <label for="salad-size"><h5>Number of Drinks ($2.50 each):</h5></label>
-          <select id="salad-size" name="salad-size">
+          <label for="drinks"><h5>Number of Drinks ($2.50 each):</h5></label>
+          <select id="drinks" name="drinks">
             <option value="0">-- # of Drinks --</option>
-            <option value="small">1</option>
-            <option value="medium">2</option>
-            <option value="large">3</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
           </select><br><br>
           <!-- Radio Button for Salad Dressing -->
           <h5>Salad Dressing ($0.50)?</h5>
@@ -107,13 +107,13 @@
           </label>
           <br><br>
           <!-- Accent-colored raised button with ripple, SUBMIT BUTTON -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
   Submit Order
           </button>
         </form>
         <!-- Confirm Order with all info (MOVE TO SOMEWHERE ELSE ONCE DONE CODE) -->
         <p>
-        <div id="display-results">
+        <div id="results">
           <div id="response"></div>
         </div>
       </p>
