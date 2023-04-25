@@ -14,6 +14,7 @@ function orderSent() {
   const PRICE_LARGE = 10.99;
   const PRICE_TOPPINGS = 1.50;
   const PRICE_DRINKS = 2.50;
+  const PRICE_DRESSING = 0.50;
 
   //declaring size, number of drinks, and salad dressing
   let size = document.getElementById("salad-size").value;
@@ -54,7 +55,7 @@ function orderSent() {
   
   //adding 0.50 to the subtotal if the user wants salad dressing
   if (userDressing == "yes") {
-    dressingCost = 0.50
+    dressingCost = PRICE_DRESSING
   }
   
   //calculating the subtotal, tax and total
@@ -63,5 +64,5 @@ function orderSent() {
   let total = subtotal + tax;
 
   //displaying the totals to the screen
-  document.getElementById("results").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
+  document.getElementById("results").innerHTML = failedResponse + "You ordered: size" + size + ", " + nOfDrinks + " drinks, " + nOfToppings + " toppings, and you said " + userDressing + " to salad dressing. Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
 }
