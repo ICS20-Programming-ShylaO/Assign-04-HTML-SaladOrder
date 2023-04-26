@@ -17,8 +17,10 @@ function orderSent() {
   const PRICE_DRESSING = 0.50;
 
   //declaring size, number of drinks, and salad dressing
-  let size = document.getElementById("salad-size").value;
-  let nOfDrinks = parseInt(document.getElementById("drinks").value);
+  let select = document.getElementById("salad-size").value;
+  let size = select.options[select.selectedIndex].value;
+  let select2 = document.getElementById("drinks").value;
+  let nOfDrinks = select2.options[select2.selectedIndex].value;
   let userDressing = document.getElementById("salad-dressing").value;
   
   //determining the number of checkboxes checked for number of toppings
@@ -55,7 +57,7 @@ function orderSent() {
   
   //adding 0.50 to the subtotal if the user wants salad dressing
   if (userDressing == "yes") {
-    dressingCost = PRICE_DRESSING
+    dressingCost = PRICE_DRESSING;
   }
   
   //calculating the subtotal, tax and total
