@@ -17,16 +17,16 @@ function orderSent() {
   const PRICE_DRESSING = 0.50;
 
   //declaring size, number of drinks, and salad dressing
-  let select = document.getElementById("salad-size").value;
+  let select = document.getElementById("salad-size");
   let size = select.options[select.selectedIndex].value;
-  let select2 = document.getElementById("drinks").value;
+  let select2 = document.getElementById("drinks");
   let nOfDrinks = select2.options[select2.selectedIndex].value;
-  let userDressing = document.getElementById("dressing-options").value;
-  
+  let userDressing = document.getElementById("dressing-options");
+document.getElementById('response').innerHTML = "The salad dressing is " + userDressing
   //determining the number of checkboxes checked for number of toppings
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
   let nOfToppings = checkboxes.length;
-  
+
   //determining the cost of the toppings using number of toppings x price per topping
   let costToppings = nOfToppings * PRICE_TOPPINGS;
   // initializing sizeCost as 0 and failed response for when user did not enter a size
