@@ -21,7 +21,7 @@ function orderSent() {
   let size = select.options[select.selectedIndex].value;
   let select2 = document.getElementById("drinks").value;
   let nOfDrinks = select2.options[select2.selectedIndex].value;
-  let userDressing = document.getElementById("salad-dressing").value;
+  let userDressing = document.getElementById("dressing-options").value;
   
   //determining the number of checkboxes checked for number of toppings
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');

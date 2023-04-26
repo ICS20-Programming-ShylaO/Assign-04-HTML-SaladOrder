@@ -121,17 +121,13 @@
           </select><br><br>
           <!-- Radio Button for Salad Dressing -->
           <h5>Salad Dressing?</h5>
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes_dressing">
-            <input type="radio" id="salad-dressing" class="mdl-radio__button" name="options" value="yes" checked>
-            <span class="mdl-radio__label">Yes</span>
-          </label>
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no_dressing">
-            <input type="radio" id="salad-dressing" class="mdl-radio__button" name="options" value="no">
-            <span class="mdl-radio__label">No</span>
-          </label>
+          <input type="radio" id="yes" name="dressing-options" value="yes">
+          <label for="yes">Yes</label><br>
+          <input type="radio" id="no" name="dressing-options" value="no">
+          <label for="no">No</label><br>
           <br><br>
-          <!-- Accent-colored raised button with ripple, SUBMIT BUTTON -->
-          <input type="submit" id="button" value="Submit Order!" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <!-- SUBMIT BUTTON -->
+          <input type="submit" id="button" value="Submit Order!">
         </form>
         <!-- Confirm Order with all info (MOVE TO SOMEWHERE ELSE ONCE DONE CODE) -->
         <p>
