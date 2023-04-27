@@ -1,3 +1,49 @@
+/* Created by: Shyla Oommen
+* Created on: Apr 2023
+* This CSS file defines the style for index.html
+* ICS2O-Programming-Assign-04-HTML-SaladOrder
+*/
+
+body {
+  background-color: #93c572
+}
+
+h5 {
+  background-color: #98fb98;
+  text-align: center;
+  border: 2px solid #2e8b57;
+  color: black;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+h6 {
+  background-color: #98fb98;
+  text-align: center;
+  border: 2px solid #2e8b57;
+  color: black;
+  margin-left: 100px;
+  margin-right: 100px; 
+}
+
+h3 {
+  background-color: #98fb98;
+  text-align: center;
+  border: 2px solid #2e8b57;
+  color: black;
+  font-weight: bold;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#response {
+  background-color: #98fb98;
+  text-align: center;
+  border: 2px solid #2e8b57;
+  color: black;
+  margin-left: 100px;
+  margin-right: 100px; 
+}
 
 table, th, td {
   border: 3px solid black;
