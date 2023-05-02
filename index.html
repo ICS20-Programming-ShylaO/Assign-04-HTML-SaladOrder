@@ -78,15 +78,17 @@
         <!-- form for online order (user input) -->
         <form action="javascript:orderSent()">
           <!-- Drop-Down Menu for size of salad -->
+          <center>
           <label for="salad-size"><h5>Size of salad:</h5></label>
           <select id="salad-size" name="salad-size">
             <option value="0">-- Size --</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
-          </select><br><br>
+          </select>
+          </center><br><br>
           <h5>Toppings:</h5>
-          <!-- MDL checkboxes for toppings -->
+          <!-- Checkboxes for toppings -->
           <input type="checkbox" id="gr-chicken" name="gr-chicken" value="gr-chicken">
           <label for="gr-chicken"> Grilled Chicken Strips</label><br>
           <input type="checkbox" id="s-steak" name="s-steak" value="s-steak">
@@ -99,6 +101,7 @@
           <label for="peanuts"> Peanuts</label>
           <br><br>
           <!-- Drop-Down Menu for Number of Drinks -->
+        <center>
           <label for="drinks"><h5>Number of Drinks:</h5></label>
           <select id="drinks" name="drinks">
             <option value="0">-- # of Drinks --</option>
@@ -106,6 +109,7 @@
             <option value="1">1</option>
             <option value="2">2</option>
           </select><br><br>
+        </center>
           <!-- Radio Button for Salad Dressing -->
           <h5>Salad Dressing?</h5>
           <input type="radio" id="yes" name="dressing-options" value="yes">
@@ -114,7 +118,9 @@
           <label for="no">No</label><br>
           <br><br>
           <!-- SUBMIT BUTTON -->
+          <center>
           <input type="submit" id="button" value="Submit Order!">
+          </center>
         </form>
         <!-- Confirm Order with all info (MOVE TO SOMEWHERE ELSE ONCE DONE CODE) -->
         <p>
@@ -122,7 +128,7 @@
           <div id="response"></div>
         </div>
       </p>
-    </main>
+      </main>
     </div>
   </body>
 </html>
