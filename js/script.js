@@ -21,7 +21,8 @@ function orderSent() {
   let size = select.options[select.selectedIndex].value;
   let select2 = document.getElementById("drinks");
   let nOfDrinks = select2.options[select2.selectedIndex].value;
-  let userDressing = document.getElementById("dressing-options");
+  let select3 = document.getElementById("salad-dressing");
+  let userDressing = select3.options[select3.selectedIndex].value;
 
   //determining the number of checkboxes checked for number of toppings
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
@@ -31,7 +32,6 @@ function orderSent() {
   let costToppings = nOfToppings * PRICE_TOPPINGS;
   // initializing sizeCost as 0 and order confirmation for displaying information
   let sizeCost = 0;
-  let orderConfirmation = "";
   //determining the cost of size + drinks using if, else if, else statements
   
   //if the size is small
@@ -49,7 +49,7 @@ function orderSent() {
 
   //otherwise, the user did not enter a size
   else {
-    orderConfirmation = "Please enter a size."
+    sizeCost = 0;
   }
 
   //determining cost of drinks
@@ -63,6 +63,7 @@ function orderSent() {
   }
   else {
     dressingCost = 0;
+    userDressing = "no";
   }
 
   //calculating the subtotal, tax and total
@@ -70,8 +71,12 @@ function orderSent() {
   let tax = subtotal * HST;
   let total = subtotal + tax;
 
-  //displaying the totals to the screen
-  orderConfirmation = "You ordered: size " + size + ", " + nOfDrinks + " drinks, " + nOfToppings + " toppings, and you said " + userDressing + " to salad dressing. <br>Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
+  //failed response for when user did not enter a size
+  if (sizeCost == 0) {
+    document.getElementById("results").innerHTML = "Please enter a size."
+  }
+  else {
+    document.getElementById("results").innerHTML = "You ordered: size " + size + ", " + nOfDrinks + " drink(s), " + nOfToppings + " toppings, and you said " + userDressing + " to salad dressing. <br>Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
+  }
   
-  document.getElementById("results").innerHTML = orderConfirmation
 }

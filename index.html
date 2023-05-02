@@ -88,17 +88,38 @@
           </select>
           </center><br><br>
           <h5>Toppings:</h5>
-          <!-- Checkboxes for toppings -->
-          <input type="checkbox" id="gr-chicken" name="gr-chicken" value="gr-chicken">
-          <label for="gr-chicken"> Grilled Chicken Strips</label><br>
-          <input type="checkbox" id="s-steak" name="s-steak" value="s-steak">
-          <label for="s-steak"> Stirloin Steak Strips</label><br>
-          <input type="checkbox" id="b-beans" name="b-beans" value="b-beans">
-          <label for="b-beans"> Black Beans</label><br>
-          <input type="checkbox" id="tuna" name="tuna" value="tuna">
-          <label for="tuna"> Tuna</label><br>
-          <input type="checkbox" id="peanuts" name="peanuts" value="peanut">
-          <label for="peanuts"> Peanuts</label>
+          <center>
+          <!-- MDL Checkboxes for Toppings -->
+          
+          <!--  MDL checkbox for grilled chicken  -->
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+            <span class="mdl-checkbox__label">Grilled Chicken Strips</span>
+            <input type="checkbox" id="gr-chicken" name="checkboxes[]" value="gr-chicken" class="mdl-checkbox__input"><br><br> 
+          </label>
+          <!--MDL checkbox for steak strips -->
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+            <span class="mdl-checkbox__label">Stirloin Steak Strips</span>
+            <input type="checkbox" id="s-steak" name="checkboxes[]" value="s-steak" class="mdl-checkbox__input"><br><br>
+          </label>
+          
+          <!-- MDL checkbox for black beans -->
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+            <span class="mdl-checkbox__label">Black Beans</span>
+            <input type="checkbox" id="b-beans" name="checkboxes[]" value="b-beans" class="mdl-checkbox__input"><br><br>
+          </label>
+          
+          <!-- MDL checkbox for tuna -->
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+            <span class="mdl-checkbox__label">Tuna</span>
+            <input type="checkbox" id="tuna" name="checkboxes[]" value="tuna" class="mdl-checkbox__input"><br><br>
+          </label>
+              
+          <!-- MDL checkbox for peanuts -->
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+            <span class="mdl-checkbox__label">Peanuts</span>
+            <input type="checkbox" id="peanuts" name="checkboxes[]" value="peanuts" class="mdl-checkbox__input"><br><br>
+          </label>
+          </center>
           <br><br>
           <!-- Drop-Down Menu for Number of Drinks -->
         <center>
@@ -110,13 +131,14 @@
             <option value="2">2</option>
           </select><br><br>
         </center>
-          <!-- Radio Button for Salad Dressing -->
-          <h5>Salad Dressing?</h5>
-          <input type="radio" id="yes" name="dressing-options" value="yes">
-          <label for="yes">Yes</label><br>
-          <input type="radio" id="no" name="dressing-options" value="no">
-          <label for="no">No</label><br>
-          <br><br>
+          <!-- Drop-Down Menu for Number of Drinks -->
+          <center>
+          <label for="salad-dressing"><h5>Salad Dressing?</h5></label>
+          <select id="salad-dressing" name="salad-dressing">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select><br><br>
+          </center>
           <!-- SUBMIT BUTTON -->
           <center>
           <input type="submit" id="button" value="Submit Order!">
